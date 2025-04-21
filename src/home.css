@@ -114,32 +114,22 @@
   }
 }
 
-.continue-btn {
-  padding: 0.75rem 1.5rem;
-  background: transparent;
-  cursor: pointer;
-  font-size: 1rem;
-  transition: all 0.3s;
-  border: 1px solid #9333ea;
-  color: #9333ea;
-  border-radius: 0.5rem;
-  font-weight: bold;
-  margin-top: 1rem;
-  display: inline-block;
-  text-decoration: none;
-  text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 0.1rem;
-}
+.btns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
 
-.continue-btn:hover {
-  background: #9333ea;
-  color: white;
+  &.ss {
+    margin-top: 2rem;
+  }
 }
 
 .btn-weird {
   position: relative;
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  gap: 20px;
   padding: 1rem 2.5rem;
   background: conic-gradient(from 120deg, #2a1f2e, #22302a, #2f2d32);
   color: #cb9dff;
@@ -290,8 +280,4 @@
   background-repeat: no-repeat;
   mix-blend-mode: screen;
   pointer-events: none;
-}
-
-.result-actions button {
-  margin: 2rem 0.5rem;
 }

@@ -9,6 +9,7 @@ import {
 } from "./context/fetch.service";
 import { sins } from "./context/data";
 import { BiLoaderCircle } from "react-icons/bi";
+import { RiTwitterXFill } from "react-icons/ri";
 
 export const App = () => {
   const [selected, setSelected] = useState([]);
@@ -65,9 +66,14 @@ $MML
               </div>
             ))}
           </div>
-          <button className="btn-weird" onClick={handleContinue}>
-            Continue
-          </button>
+          <div className="btns">
+            <button className="btn-weird" onClick={handleContinue}>
+              Follow <RiTwitterXFill />
+            </button>
+            <button className="btn-weird" onClick={handleContinue}>
+              Continue
+            </button>
+          </div>
         </>
       ) : (
         <>
@@ -83,7 +89,7 @@ $MML
               {generateExplanation(selected)} <i></i>
             </p>
           </div>
-          <div className="result-actions">
+          <div className="btns ss">
             <button onClick={handleReset} className="btn-weird">
               Go Home
             </button>
