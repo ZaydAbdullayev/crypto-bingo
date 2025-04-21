@@ -38,9 +38,9 @@ export const App = () => {
     const cardEl = document.querySelector(".result");
     const imgUrl = await uploadToImgbb(await getPackAsImageData(cardEl));
     const tweetText = `
-MY MIND LABYRINTH RESULT
+Crypto Bingo
 
-$MML
+$CB
 `;
     const tweetUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(
       tweetText
@@ -53,7 +53,7 @@ $MML
     <div className="app">
       {!showResult ? (
         <>
-          <h1 className="title gradient-text">KRİPTO - BINGO</h1>
+          <h1 className="title gradient-text">CRYPTO BINGO</h1>
           <p className="subtitle">choose what happens to you</p>
           <div className="grid">
             {sins.map((sin, i) => (
@@ -67,7 +67,12 @@ $MML
             ))}
           </div>
           <div className="btns">
-            <button className="btn-weird" onClick={handleContinue}>
+            <button
+              className="btn-weird"
+              onClick={() =>
+                window.open("https://x.com/cryptobingo_solF", "_blank")
+              }
+            >
               Follow <RiTwitterXFill />
             </button>
             <button className="btn-weird" onClick={handleContinue}>
