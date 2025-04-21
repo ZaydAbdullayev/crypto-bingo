@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Orbitron", sans-serif;
+}
+
+:root {
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: #ffffff;
+  background-color: #010101;
+  letter-spacing: 0.05rem;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* src/App.css */
+body {
+  margin: 0;
+  background-color: #0000009d;
+  color: #e4e4e7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: radial-gradient(
+      circle at center,
+      rgba(146, 51, 234, 0.116) 100%,
+      transparent 60%
+    ),
+    linear-gradient(
+      1deg,
+      transparent 24%,
+      #222 25%,
+      #222 26%,
+      transparent 27%,
+      transparent 74%,
+      #222 75%,
+      #222 76%,
+      transparent 77%,
+      transparent
+    ),
+    linear-gradient(
+      90deg,
+      transparent 24%,
+      #222 25%,
+      #222 26%,
+      transparent 27%,
+      transparent 74%,
+      #222 75%,
+      #111 76%,
+      transparent 77%,
+      transparent
+    );
+  background-size: 60px 60px, 60px 60px, 60px 60px;
+  background-blend-mode: overlay;
+}
+
+input {
+  outline: none;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.loader {
+  margin-bottom: -4px;
+  margin-left: 10px;
+  font-size: 20px;
+  animation: loading 1s linear infinite;
+}
+
+@keyframes loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
