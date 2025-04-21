@@ -1,7 +1,12 @@
 // src/App.jsx
 import { useState } from "react";
 import "./home.css";
-import { generateExplanation, getPackAsImageData, savePackAsImage, uploadToImgbb } from "./context/fetch.service";
+import {
+  generateExplanation,
+  getPackAsImageData,
+  savePackAsImage,
+  uploadToImgbb,
+} from "./context/fetch.service";
 import { sins } from "./context/data";
 import { BiLoaderCircle } from "react-icons/bi";
 
@@ -61,7 +66,7 @@ $MML
             ))}
           </div>
           <button className="btn-weird" onClick={handleContinue}>
-            Devam Et
+            Continue
           </button>
         </>
       ) : (
