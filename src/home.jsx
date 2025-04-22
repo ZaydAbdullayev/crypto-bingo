@@ -50,7 +50,7 @@ export const App = () => {
             <button
               className="btn-weird"
               onClick={() =>
-                window.open("https://x.com/cryptobingo_solF", "_blank")
+                window.open("https://x.com/cryptobingo_sol", "_blank")
               }
             >
               Follow <RiTwitterXFill />
