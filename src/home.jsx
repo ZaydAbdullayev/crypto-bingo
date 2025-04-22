@@ -3,18 +3,14 @@ import { useState } from "react";
 import "./home.css";
 import {
   generateExplanation,
-  getPackAsImageData,
   savePackAsImage,
-  uploadToImgbb,
 } from "./context/fetch.service";
 import { sins } from "./context/data";
-import { BiLoaderCircle } from "react-icons/bi";
 import { RiTwitterXFill } from "react-icons/ri";
 
 export const App = () => {
   const [selected, setSelected] = useState([]);
   const [showResult, setShowResult] = useState(false);
-  const [sending, setSending] = useState(false);
 
   const toggleSin = (sin) => {
     setSelected((prev) =>
@@ -31,22 +27,6 @@ export const App = () => {
   const downloadResult = async () => {
     const cardElement = document.querySelector(".result");
     savePackAsImage(cardElement);
-  };
-
-  const shareOnX = async () => {
-    setSending(true);
-    const cardEl = document.querySelector(".result");
-    const imgUrl = await uploadToImgbb(await getPackAsImageData(cardEl));
-    const tweetText = `
-Crypto Bingo
-
-$CB
-`;
-    const tweetUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(
-      tweetText
-    )}&url=${encodeURIComponent(imgUrl)}`;
-    window.open(tweetUrl, "_blank");
-    setSending(false);
   };
 
   return (
@@ -100,9 +80,6 @@ $CB
             </button>
             <button className="btn-weird" onClick={downloadResult}>
               Download Result
-            </button>
-            <button className="btn-weird" onClick={shareOnX}>
-              Share in X {sending && <BiLoaderCircle className="loader" />}
             </button>
           </div>
         </>
